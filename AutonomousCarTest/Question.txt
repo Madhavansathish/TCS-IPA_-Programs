@@ -1,0 +1,104 @@
+Problem Name
+
+Autonomous Car Test Analysis and Grade Assignment
+
+Problem Statement
+
+Create a class AutonomousCar with the following attributes:
+
+carId – int
+brand – String
+noOfTestsConducted – int
+noOfTestsPassed – int
+environment – String
+grade – String
+
+Write appropriate getter and setter methods for all the attributes. Create a parameterized constructor that initializes all attributes except grade.
+
+Create a class Solution (or Main) with the main method. Implement the following two static methods:
+
+Method 1: findTestsPassedByEnv
+public static int findTestsPassedByEnv(
+        AutonomousCar[] cars,
+        String environment)
+
+This method should:
+
+Accept an array of AutonomousCar objects and an environment string.
+Calculate and return the sum of the noOfTestsPassed values of all cars whose environment matches the given environment (case-insensitive).
+If no matching car is found, return 0.
+Method 2: updateCarGrade
+public static AutonomousCar updateCarGrade(
+        String brand,
+        AutonomousCar[] cars)
+
+This method should:
+
+Accept a brand string and an array of AutonomousCar objects.
+Search for the car whose brand matches the input brand (case-insensitive).
+Calculate the rating using the formula:
+rating = (noOfTestsPassed × 100) / noOfTestsConducted
+Assign the grade according to the following rules:
+Rating	Grade
+rating >= 80	A1
+rating < 80	B2
+Return the updated AutonomousCar object.
+If no matching car is found, return null.
+Input Format
+
+Read the details of 4 AutonomousCar objects in the following order:
+
+carId
+brand
+noOfTestsConducted
+noOfTestsPassed
+environment
+
+After reading the four objects, read:
+
+the environment to search for
+the brand to update and retrieve
+Output Format
+
+For the findTestsPassedByEnv method:
+
+Print the total number of tests passed if the returned value is greater than 0.
+Otherwise, print:
+There are no tests passed in this particular environment
+
+For the updateCarGrade method:
+
+If a matching car is found, print:
+brand::grade
+
+Example:
+
+Tesla::A1
+If no matching car is found, print:
+No Car is available with the specified brand
+Sample Input
+100
+Tesla
+1000
+500
+Hills
+200
+Ford
+2000
+1500
+Desert
+300
+Royce
+3000
+1700
+Hills
+400
+Mercedez
+1000
+400
+Desert
+Desert
+Mercedez
+Sample Output
+1900
+Mercedez::B2
