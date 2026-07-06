@@ -1,0 +1,56 @@
+Problem Statement
+
+Create a class Medicine with the following attributes:
+
+medicineName – String
+batch – String
+disease – String
+price – int
+
+Provide a parameterized constructor and appropriate getter and setter methods for all the attributes.
+
+Create a class Solution (or Main) with the following static method:
+
+public static Medicine[] getPriceByDisease(Medicine[] medicines, String disease)
+Method Description
+
+The method should:
+
+Accept an array of Medicine objects and a disease name as input.
+Find all medicines whose disease matches the given disease name (case-insensitive).
+Sort the matching medicines in ascending order based on their price.
+Return the sorted array of matching Medicine objects.
+If no medicines are found for the given disease, return null (or an empty array based on implementation).
+Input Format
+Read details of 4 Medicine objects.
+For each medicine, read:
+medicineName
+batch
+disease
+price
+Finally, read the disease name to be searched.
+Output Format
+If one or more medicines match the given disease, print their prices in ascending order, one per line.
+Otherwise, print:
+No medicine found
+Sample Input
+Dolo650
+B101
+Fever
+50
+Paracetamol
+B102
+Cold
+30
+Cetirizine
+B103
+Allergy
+20
+Crocin
+B104
+Fever
+40
+Fever
+Sample Output
+40
+50
