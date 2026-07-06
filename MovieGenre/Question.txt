@@ -1,0 +1,68 @@
+Problem Name
+Movie Genre Budget Analysis
+Problem Statement
+
+Create a class Movie with the following attributes:
+
+movieName – String
+company – String
+genre – String
+budget – int
+
+Write appropriate getter and setter methods for all the attributes and create a parameterized constructor that initializes the attributes in the above-mentioned sequence.
+
+Create a class Solution (or Main) and implement the following static method:
+
+public static Movie[] getMovieByGenre(Movie[] movies, String searchGenre)
+Method Description
+
+This method should:
+
+Accept an array of Movie objects and a searchGenre string as parameters.
+Search for all movies whose genre matches the given searchGenre (case-insensitive).
+Return an array containing all the matching Movie objects.
+If no movie matches the given genre, return null (or an empty array, based on implementation).
+Input Format
+
+Read the details of 4 Movie objects in the following order:
+
+movieName
+company
+genre
+budget
+
+After reading the details of the four movies, read the searchGenre.
+
+Output Format
+
+After calling the getMovieByGenre method:
+
+For each returned movie, print:
+High Budget Movie
+
+if the movie's budget is greater than 80000000, otherwise print:
+
+Low Budget Movie
+If no movie exists for the given genre, print:
+No movie found
+Sample Input
+aaa
+Marvel
+Action
+250000000
+bbb
+Marvel
+Comedy
+25000000
+ccc
+Marvel
+Comedy
+2000000
+ddd
+Marvel
+Action
+300000000
+Action
+Sample Output
+High Budget Movie
+High Budget Movie
